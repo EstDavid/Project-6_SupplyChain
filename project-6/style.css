@@ -64,3 +64,18 @@ button {
 .horizontal-rule {
   background-color:#BDBDBD;
 }
+
+table {
+  width: 60%;
+  padding: 30px;
+  border-radius: 4px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align:center;
+  width: 200px;
+}

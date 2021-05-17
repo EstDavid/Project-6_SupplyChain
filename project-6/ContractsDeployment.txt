@@ -1,0 +1,228 @@
+zebloxt@LAPTOP-CNLE2OKS:/mnt/c/pr0/Udacity/SupplyChain/nd1309-Project-6b-Example-Template/project-6$ truffle migrate --network rinkeby
+
+Compiling your contracts...
+===========================
+✔ Fetching solc version list from solc-bin. Attempt #1
+> Everything is up to date, there is nothing to compile.
+
+
+
+Migrations dry-run (simulation)
+===============================
+> Network name:    'rinkeby-fork'
+> Network id:      4
+> Block gas limit: 10000000 (0x989680)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > block number:        8533204
+   > block timestamp:     1620232807
+   > account:             0x6D666cEe23801611E53CcA2485B3201058B42284
+   > balance:             7.337127709
+   > gas used:            223594 (0x3696a)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00223594 ETH
+
+   -------------------------------------
+   > Total cost:          0.00223594 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'FarmerRole'
+   ----------------------
+   > block number:        8533206
+   > block timestamp:     1620232818
+   > account:             0x6D666cEe23801611E53CcA2485B3201058B42284
+   > balance:             7.333866019
+   > gas used:            298821 (0x48f45)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00298821 ETH
+
+
+   Deploying 'FactoryRole'
+   -----------------------
+   > block number:        8533207
+   > block timestamp:     1620232828
+   > account:             0x6D666cEe23801611E53CcA2485B3201058B42284
+   > balance:             7.330877569
+   > gas used:            298845 (0x48f5d)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00298845 ETH
+
+
+   Deploying 'DistributorRole'
+   ---------------------------
+   > block number:        8533208
+   > block timestamp:     1620232843
+   > account:             0x6D666cEe23801611E53CcA2485B3201058B42284
+   > balance:             7.327889359
+   > gas used:            298821 (0x48f45)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00298821 ETH
+
+
+   Deploying 'ConsumerRole'
+   ------------------------
+   > block number:        8533209
+   > block timestamp:     1620232852
+   > account:             0x6D666cEe23801611E53CcA2485B3201058B42284
+   > balance:             7.324901149
+   > gas used:            298821 (0x48f45)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00298821 ETH
+
+
+   Deploying 'SupplyChain'
+   -----------------------
+   > block number:        8533210
+   > block timestamp:     1620232881
+   > account:             0x6D666cEe23801611E53CcA2485B3201058B42284
+   > balance:             7.297131829
+   > gas used:            2776932 (0x2a5f64)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02776932 ETH
+
+   -------------------------------------
+   > Total cost:           0.0397224 ETH
+
+
+Summary
+=======
+> Total deployments:   6
+> Final cost:          0.04195834 ETH
+
+
+
+
+
+Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 10000000 (0x989680)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0xb509b7d75808dfb329cc6ed0d4610dcfde003151bb30320ff7eb92c4d661e652
+   > Blocks: 1            Seconds: 9
+   > contract address:    0xeA03E50b7a7553B94401Cb8BB16C74Be0b5Db68c
+   > block number:        8533210
+   > block timestamp:     1620232907
+   > account:             0x6D666cEe23801611E53CcA2485B3201058B42284
+   > balance:             7.336964709
+   > gas used:            239894 (0x3a916)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00239894 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00239894 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'FarmerRole'
+   ----------------------
+   > transaction hash:    0xc71edd10b9e769e389a3849e9be45fc9b4ddd4e72b01f1735ea5be24a992aa09
+   > Blocks: 0            Seconds: 9
+   > contract address:    0xFB481a89b3C84B485f6f2a2D904F3AeC767bD821
+   > block number:        8533212
+   > block timestamp:     1620232937
+   > account:             0x6D666cEe23801611E53CcA2485B3201058B42284
+   > balance:             7.333363019
+   > gas used:            314421 (0x4cc35)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00314421 ETH
+
+
+   Deploying 'FactoryRole'
+   -----------------------
+   > transaction hash:    0x4e10fb0c3074aba4cba0778ee65d38dbb3c88773ff73f7ed1225bf5e4fc20c66
+   > Blocks: 0            Seconds: 8
+   > contract address:    0x5f6c02594ADC2B9337D6ce8E2629A8Aa5B64e6F2
+   > block number:        8533213
+   > block timestamp:     1620232952
+   > account:             0x6D666cEe23801611E53CcA2485B3201058B42284
+   > balance:             7.330218569
+   > gas used:            314445 (0x4cc4d)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00314445 ETH
+
+
+   Deploying 'DistributorRole'
+   ---------------------------
+   > transaction hash:    0xec384b58e566ce6fe4c0febce0ff039136b246e75072999418cc90a1ca647a8b
+   > Blocks: 1            Seconds: 9
+   > contract address:    0x571920c60549aaA54EfB4Cf32c7F1A78230BdEb1
+   > block number:        8533214
+   > block timestamp:     1620232967
+   > account:             0x6D666cEe23801611E53CcA2485B3201058B42284
+   > balance:             7.327074359
+   > gas used:            314421 (0x4cc35)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00314421 ETH
+
+
+   Deploying 'ConsumerRole'
+   ------------------------
+   > transaction hash:    0xc899d2d4925c7881bc048d452448732fab537010f7ef950a81c1372e89b4831b
+   > Blocks: 1            Seconds: 8
+   > contract address:    0xC76c286FB2011a8440b0Fe81A004D7b93d9B9e84
+   > block number:        8533215
+   > block timestamp:     1620232982
+   > account:             0x6D666cEe23801611E53CcA2485B3201058B42284
+   > balance:             7.323930149
+   > gas used:            314421 (0x4cc35)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00314421 ETH
+
+
+   Deploying 'SupplyChain'
+   -----------------------
+   > transaction hash:    0x5b84a3c906ba6492ba7869c923e46a34ca815a3af2399a46325819c1bfec0e86
+   > Blocks: 1            Seconds: 9
+   > contract address:    0x6915c7F096AF88cf84D174BB64e4644003EB9252
+   > block number:        8533216
+   > block timestamp:     1620232997
+   > account:             0x6D666cEe23801611E53CcA2485B3201058B42284
+   > balance:             7.295031829
+   > gas used:            2889832 (0x2c1868)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02889832 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0414754 ETH
+
+
+Summary
+=======
+> Total deployments:   6
+> Final cost:          0.04387434 ETH

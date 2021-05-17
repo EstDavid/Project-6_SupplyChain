@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fair Trade Coffee</title>
+    <title>Fair Trade Chocolate</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1 style="text-align: center;">Fair Trade Coffee</h1>
+        <h1 style="text-align: center;">Fair Trade Chocolate</h1>
         <hr>
-        <p style="text-align: center;">Prove the authenticity of coffee using the Ethereum blockchain.</p>
+        <p style="text-align: center;">Prove the authenticity of chocolate using the Ethereum blockchain.</p>
     </div>
 
     <div id="ftc-harvest">
@@ -27,64 +27,183 @@
             <input type="number" id="upc" name="upc" value=1><br>
             Current Owner ID
             <br>
-            <input type="text" id="ownerID" name="ownerID" value="0x963865f57804b38459dd4b2da2f760211a200438" size="50"><br>
+            <input type="text" id="ownerID" name="ownerID" size="50"><br>
             <div class=button-div>
-                <button class="btn-fetchOne" id="button" type="button" data-id="9">Fetch Data 1</button>
-                <button class="btn-fetchTwo" id="button" type="button" data-id="10">Fetch Data 2</button>
+                <button class="btn-fetchOne" id="button" type="button" data-id="13">Fetch Data</button>
             </div>
         </div>
         <div class=form-break></div>
+        <h2>Role management</h2>
+        <div class="form-group">
+            New Farmer ID
+            <br>
+            <input class="input-field" type="text" id="originFarmerID" name="originFarmerID"><br>
+            <div class=button-div>
+                <button class="btn-newFarmer" id="button" type="button" data-id="14">Add new farmer</button>
+            </div>
+            New Factory ID
+            <br>
+            <input class="input-field" type="text" id="factoryID" name="factoryID"><br>
+            <div class=button-div>
+                <button class="btn-newFarmer" id="button" type="button" data-id="15">Add new factory</button>
+            </div>
+            New Distributor ID
+            <br>
+            <input class="input-field" type="text" id="distributorID" name="distributorID"><br>
+            <div class=button-div>
+                <button class="btn-newFarmer" id="button" type="button" data-id="16">Add new distributor</button>
+            </div>
+            New Consumer ID
+            <br>
+            <input class="input-field" type="text" id="consumerID" name="consumerID"><br>
+            <div class=button-div>
+                <button class="btn-newFarmer" id="button" type="button" data-id="17">Add new consumer</button>
+            </div>
+        </div>
+        <div class=form-break></div>
+        <div id="tbl-productDetails">
+            <h2>Product Details</h2>
+            <table>
+                <tr>
+                <td>SKU</td>
+                <td id="skuOutput"></td>
+                </tr>
+                <tr>
+                <td>UPC</td>
+                <td id="upcOutput"></td>
+                </tr>
+                <tr>
+                    <td>Owner ID</td>
+                    <td id="ownerIDOutput"></td>
+                </tr>
+                <tr>
+                    <td>Origin Farmer ID</td>
+                    <td id="originFarmerIDOutput"></td>
+                </tr>
+                <tr>
+                    <td>Origin Farm Name</td>
+                    <td id="originFarmNameOutput"></td>
+                </tr>
+                <tr>
+                    <td>Origin Farm Information</td>
+                    <td id="originFarmInformationOutput"></td>
+                </tr>
+                <tr>
+                    <td>Origin Farm Latitude</td>
+                    <td id="originFarmLatitudeOutput"></td>
+                </tr>
+                <tr>
+                    <td>Origin Farm Longitude</td>
+                    <td id="originFarmLongitudeOutput"></td>
+                </tr>
+                <tr>
+                    <td>Product ID</td>
+                    <td id="productIDOutput"></td>
+                </tr>
+                <tr>
+                    <td>Product Notes</td>
+                    <td id="productNotesOutput"></td>
+                </tr>
+                <tr>
+                    <td>Product Price</td>
+                    <td id="productPriceOutput"></td>
+                </tr>
+                <tr>
+                    <td>Item State</td>
+                    <td id="itemStateOutput"></td>
+                </tr>
+                <tr>
+                    <td>Factory ID</td>
+                    <td id="factoryIDOutput"></td>
+                </tr>
+                <tr>
+                    <td>Distributor ID</td>
+                    <td id="distributorIDOutput"></td>
+                </tr>
+                <tr>
+                    <td>Chocolate Brand</td>
+                    <td id="chocolateBrandOutput"></td>
+                </tr>
+                <tr>
+                    <td>Consumer ID</td>
+                    <td id="consumerIDOutput"></td>
+                </tr>
+            </table>
+        </div>
+          <div class=form-break></div>
         <h2>Farm Details</h2>
         <div class="form-group">
             Farmer ID
             <br>
-            <input type="text" id="originFarmerID" name="originFarmerID" value="0x99c289eb2aacec289631a5ddf62cf27a63d4494f"
-                size="50"><br>
+            <input type="text" id="originFarmerID" name="originFarmerID" size="50"><br>
             Farm Name
             <br>
-            <input type="text" id="originFarmName" name="originFarmName" value="John Doe"><br>
+            <input type="text" id="originFarmName" name="originFarmName" ><br>
             Farm Information
             <br>
-            <input type="text" id="originFarmInformation" name="originFarmInformation" value="Yarra Valley"><br>
+            <input type="text" id="originFarmInformation" name="originFarmInformation"><br>
             Farm Latitude
             <br>
-            <input type="text" id="originFarmLatitude" name="originFarmLatitude" value="-38.239770"><br>
+            <input type="text" id="originFarmLatitude" name="originFarmLatitude"><br>
             Farm Longitude
             <br>
-            <input type="text" id="originFarmLongitude" name="originFarmLongitude" value="144.341490"><br>
+            <input type="text" id="originFarmLongitude" name="originFarmLongitude"><br>
             <br>
-            <button class="btn-harvest" id="button" type="button" data-id="1">Harvest</button>
-            <button class="btn-process" id="button" type="button" data-id="2">Process</button>
-            <button class="btn-pack" id="button" type="button" data-id="3">Pack</button>
-            <button class="btn-forsale" id="button" type="button" data-id="4">ForSale</button>
+            <button class="btn-harvest" id="button" type="button" data-id="1">Harvest beans</button>
+            <button class="btn-process" id="button" type="button" data-id="2">Process beans</button>
+            <button class="btn-pack" id="button" type="button" data-id="3">Pack beans</button>
+            <button class="btn-forsale" id="button" type="button" data-id="4">Beans ForSale</button>
         </div>
         <div class=form-break></div>
-        <h2>Product Details</h2>
+        <h2>Cacao Beans Details</h2>
         <div class="form-group">
             Product Notes
             <br>
-            <input type="text" id="productNotes" name="productNotes" value="Best beans for Espresso" size="60"><br>
+            <input type="text" id="productNotes" name="productNotes" size="60"><br>
             Product Price
             <br>
-            <input type="number" id="productPrice" name="productPrice" value=1>ETH<br>
+            <input type="number" id="productPrice" name="productPrice">ETH<br>
+            Factory ID
+            <br>
+            <input type="text" id="factoryID" name="factoryID" size="50">
+            <br>
             Distributor ID
             <br>
-            <input type="text" id="distributorID" name="distributorID" value="0xf1b1bcd24dad92303dd9fe78be639f7bcf9c238d"
-                size="50">
+            <input type="text" id="distributorID" name="distributorID" size="50"><br>
+            Consumer ID
             <br>
-            Retailer ID
+            <input type="text" id="consumerID" name="consumerID" size="50"><br>
             <br>
-            <input type="text" id="retailerID" name="retailerID" value="0x0fb2bfefd526966c87efa19f6693d50971763fc2"
-                size="50"><br>
+            <button class="btn-buyBeans" id="button" type="button" data-id="5">Buy beans</button>
+            <button class="btn-grindBeans" id="button" type="button" data-id="6">Grind beans</button>
+            <button class="btn-makeChocolate" id="button" type="button" data-id="7">Make chocolate</button>
+        </div>
+        <div class=form-break></div>
+        <h2>Send Chocolate to Distributor</h2>
+        <div class="form-group">
             Distributor ID
             <br>
-            <input type="text" id="consumerID" name="consumerID" value="0x5d777e9127b28fb119e81a6304278a0a21bef1c4"
-                size="50"><br>
+            <input type="text" id="distributorID" name="distributorID" size="60"><br>
             <br>
-            <button class="btn-buy" id="button" type="button" data-id="5">Buy</button>
-            <button class="btn-ship" id="button" type="button" data-id="6">Ship</button>
-            <button class="btn-receive" id="button" type="button" data-id="7">Receive</button>
-            <button class="btn-purchase" id="button" type="button" data-id="8">Purchase</button>
+            <button class="btn-shipChocolate" id="button" type="button" data-id="8">Ship chocolate</button><br>
+        </div>
+        <div class=form-break></div>
+        <h2>Receive, Brand and Sell Chocolate</h2>
+        <div class="form-group">
+            <button class="btn-receiveChocolate" id="button" type="button" data-id="9">Receive chocolate</button><br>
+            <br>
+            Set a chocolate brand
+            <br>
+            <input type="text" id="chocolateBrand" name="chocolateBrand" size="60"><br>
+            <br>
+            <button class="btn-brandChocolate" id="button" type="button" data-id="10">Brand chocolate</button><br>
+            Chocolate price
+            <br>
+            <input type="text" id="chocolatePrice" name="chocolatePrice" size="60"><br>
+            <br>
+            <button class="btn-sellChocolate" id="button" type="button" data-id="11">Sell chocolate</button><br>
+            <br>
+            <button class="btn-purchase" id="button" type="button" data-id="12">Purchase chocolate</button><br>
         </div>
         <div class=form-break></div>
         <hr>
@@ -100,9 +219,9 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="js/web3.min.js"></script> -->
-    <script src="js/truffle-contract.js"></script>
-    <script src="js/app.js"></script>
+    <script src="src/js/web3.min.js"></script>
+    <script src="src/js/truffle-contract.js"></script>
+    <script src="src/js/app.js"></script>
 </body>
 
 </html>
