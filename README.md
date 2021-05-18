@@ -1,5 +1,4 @@
 # Cacaco & Chocolate supply chain project
-
 This repository contains an Ethereum DApp the demonstrates a Supply Chain flow from the moment a cacao farmer harvests the beans, to the moment a consumer purchases the chocolate made with those beans.
 
 ## Roles
@@ -9,6 +8,61 @@ There are 4 different roles in this DApp, apart from the owner of the contract:
 - Distributor => A Distributor is able to receive chocolate, give it a brand of their choice and put it up for sale.
 - Consumer => A Consumer is able to purchase chocolate from a Distributor
 
+## Activity Diagram
+
+![activity diagram](images/Supplychain-Activity.png)
+
+## Sequence Diagram
+
+![sequence diagram](images/Supplychain-Sequence.png)
+
+## State Diagram
+
+![state diagram](images/Supplychain-State.png)
+
+## Classes
+
+![classes](images/Supplychain-Data Modelling.png)
+
+
+## Frontend functionality
+The frontend allows to try all functionailities of the Supply Chain. 
+
+It is divided into 8 sections.
+
+### Product Overview
+The product overview allows to set the SKU and UPC of the batch we want to either process or view. The 'Fetch Data' button allows to view all the details of a certain batch on the 'Product Details' section
+![product overview](images/frontend1.png)
+
+### Role management
+This section allows to interact with the roles of the smart contract and add new addresses to the different roles of the Supply Chain. From this section it is possible to add a new farmer, a new distributor or a new consumer.
+![role management](images/frontend2.png)
+
+### Product Details
+Here it is possible to visualize all the different attributes of a specific batch. We select the batch we want to see in the 'Product Overview' section and click on the 'Fetch Data' button. This button call as javascript function which collects all data from the fetchItemBufferOne, fetchItemBufferTwo and fetchItemBufferThree functions of the smart contract.
+![product details](images/frontend3.png)
+
+### Farm Details
+Here the farmer is able to add the information about the farm. This information will remain unchanged for that specific batch of beans/chocolate
+![farm details](images/frontend4.png)
+
+### Cacao Beans Details
+This section allows the farmer to input the information about a specific batch of beans (Product Notes), as well as the price for that batch.
+It also contains the 'Buy beans' button which allows a factory to buy a batch of beans. After this, the factory is able to use the 'Grind beans' and 'Make chocolate' functions.
+![cacao beans details](images/frontend5.png)
+
+### Send Chocolate to Distributor
+This field is used by a factory to send a batch of chocolate to a distributor
+![send chocolate to distributor](images/frontend6.png)
+
+### Receive, Brand and Sell Chocolate
+In this section a distributor is able to use the 'Receive chocolate' function, define a chocolate brand for a btach of chocolate and put it up for sale.
+The 'Purchase chocolate' button is used by the consumer to buy chocolate
+![receive brand and sell chocolate](images/frontend7.png)
+
+### Transaction History
+Here is possible to see all the events generated during a session interactin with the supply chain
+![transaction history](images/frontend8.png)
 
 
 
