@@ -1,14 +1,12 @@
 pragma solidity ^0.4.24;
 // Import the libraries of different roles
+import "../chocolatecore/Ownable.sol";
 import "../chocolateaccesscontrol/FarmerRole.sol";
 import "../chocolateaccesscontrol/FactoryRole.sol";
 import "../chocolateaccesscontrol/DistributorRole.sol";
 import "../chocolateaccesscontrol/ConsumerRole.sol";
 // Define a contract 'Supplychain'
-contract SupplyChain is FarmerRole, FactoryRole, DistributorRole, ConsumerRole {
-
-  // Define 'owner'
-  address owner;
+contract SupplyChain is Ownable, FarmerRole, FactoryRole, DistributorRole, ConsumerRole {
 
   // Define a variable called 'upc' for Universal Product Code (UPC)
   uint  upc;
@@ -76,12 +74,6 @@ contract SupplyChain is FarmerRole, FactoryRole, DistributorRole, ConsumerRole {
   event ChocolateBranded (uint upc);
   event ChocolateForSale (uint upc);
   event ChocolateSold (uint upc);
-
-  // Define a modifer that checks to see if msg.sender == owner of the contract
-  modifier onlyOwner() {
-    require(msg.sender == owner);
-    _;
-  }
 
   // Define a modifer that verifies the Caller
   modifier verifyCaller (address _address) {
@@ -186,16 +178,13 @@ contract SupplyChain is FarmerRole, FactoryRole, DistributorRole, ConsumerRole {
   // and set 'sku' to 1
   // and set 'upc' to 1
   constructor() public payable {
-    owner = msg.sender;
     sku = 1;
     upc = 1;
   }
 
   // Define a function 'kill' if required
-  function kill() public {
-    if (msg.sender == owner) {
-      selfdestruct(owner);
-    }
+  function kill() public onlyOwner {
+      selfdestruct(msg.sender);
   }
 
   // Define a function 'harvestBeans' that allows a farmer to mark an item 'BeansHarvested'

@@ -1,3 +1,17 @@
+# Cacaco & Chocolate supply chain project
+
+This repository contains an Ethereum DApp the demonstrates a Supply Chain flow from the moment a cacao farmer harvests the beans, to the moment a consumer purchases the chocolate made with those beans.
+
+## Roles
+There are 4 different roles in this DApp, apart from the owner of the contract:
+- Farmer => A Farmer is able to harvest beans and provide the batch with the data of the Farm (Name, Information, Latitude and Longitude, as well as Notes about the bacth itself). After harvesting them, the Farmer is able to process them, pack them and then set a price and put them for sale.
+- Factory => A Factory is able to buy beans which are for sale, grind them, make chocolate and them ship the chocolate to a Distributor of their choice. 
+- Distributor => A Distributor is able to receive chocolate, give it a brand of their choice and put it up for sale.
+- Consumer => A Consumer is able to purchase chocolate from a Distributor
+
+
+
+
 # Supply chain & data auditing
 
 This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
