@@ -11,6 +11,12 @@ It was deployed in the following transaction
 "0x0192ca66330dcb229a1041583c5356691d8a8ce72110ff99e77c3df741281377"
 [etherscan transaction page](https://rinkeby.etherscan.io/tx/0x0192ca66330dcb229a1041583c5356691d8a8ce72110ff99e77c3df741281377)
 
+## Program version numbers
+Truffle v5.2.3 (core: 5.2.3)
+Solidity v0.5.16 (solc-js)
+Node v10.19.0
+Web3.js v1.2.9
+
 ## Roles
 There are 4 different roles in this DApp, apart from the owner of the contract:
 - Farmer => A Farmer is able to harvest beans and provide the batch with the data of the Farm (Name, Information, Latitude and Longitude, as well as Notes about the bacth itself). After harvesting them, the Farmer is able to process them, pack them and then set a price and put them for sale.
