@@ -33,11 +33,12 @@ App = {
         App.originFarmLatitude = $("#originFarmLatitude").val();
         App.originFarmLongitude = $("#originFarmLongitude").val();
         App.productNotes = $("#productNotes").val();
-        App.productPrice = $("#productPrice").val();
+        App.beansPrice = $("#beansPrice").val();
         App.factoryID = $("#factoryID").val();
         App.distributorID = $("#distributorID").val();
         App.chocolateBrand = $("#chocolateBrand").val();
-        App.consumerID = $("#consumerID").val();      
+        App.consumerID = $("#consumerID").val();
+        App.chocolatePrice = $("#chocolatePrice").val();
 
         console.log(
             App.sku,
@@ -49,11 +50,12 @@ App = {
             App.originFarmLatitude, 
             App.originFarmLongitude, 
             App.productNotes, 
-            App.productPrice, 
+            App.beansPrice, 
             App.factoryID, 
             App.distributorID, 
             App.consumerID,
-            App.chocolateBrand
+            App.chocolateBrand,
+            App.chocolatePrice
         );
     },
 
@@ -243,9 +245,9 @@ App = {
         App.readForm();
 
         App.contracts.SupplyChain.deployed().then(function(instance) {
-            const productPrice = web3.toWei(1, "ether");
-            console.log('productPrice',productPrice);
-            return instance.sellBeans(App.upc, App.productPrice.toString(), {from: App.metamaskAccountID});
+            const beansPriceWei = web3.toWei(App.beansPrice.toString(), "ether");
+            console.log('productPrice',beansPriceWei);
+            return instance.sellBeans(App.upc, beansPriceWei, {from: App.metamaskAccountID});
         }).then(function(result) {
             $("#ftc-item").text(result);
             console.log('sellBeans',result);
@@ -351,7 +353,8 @@ App = {
         App.readForm();
 
         App.contracts.SupplyChain.deployed().then(function(instance) {
-            return instance.sellChocolate(App.upc, App.productPrice.toString(), {from: App.metamaskAccountID});
+            const chocolatePriceWei = web3.toWei(App.chocolatePrice.toString(), "ether");
+            return instance.sellChocolate(App.upc, chocolatePriceWei, {from: App.metamaskAccountID});
         }).then(function(result) {
             $("#ftc-item").text(result);
             console.log('sellChocolate',result);
@@ -366,7 +369,7 @@ App = {
         App.readForm();
 
         App.contracts.SupplyChain.deployed().then(function(instance) {
-            const walletValue = web3.utils.toWei('3', "ether");
+            const walletValue = web3.toWei('3', "ether");
             return instance.purchaseItem(App.upc, {from: App.metamaskAccountID, value: walletValue});
         }).then(function(result) {
             $("#ftc-item").text(result);
@@ -420,7 +423,7 @@ App = {
             originFarmLongitudeText.innerText = result[3];
             productIDText.innerText = result[4];
             productNotesText.innerText = result[5];
-            productPriceText.innerText = result[6];
+            productPriceText.innerText = web3.fromWei(result[6].toString(), 'ether');
             $("#ftc-item").text(result);
             console.log('fetchItemBufferTwo', result);
         }).catch(function(err) {
@@ -436,11 +439,52 @@ App = {
         const distributorIDText = document.getElementById("distributorIDOutput");
         const chocolateBrandText = document.getElementById("chocolateBrandOutput");
         const consumerIDText = document.getElementById("consumerIDOutput");
-                            
+
             App.contracts.SupplyChain.deployed().then(function(instance) {
               return instance.fetchItemBufferThree.call(App.upc);
             }).then(function(result) {
-                itemStateText.innerText = result[2];
+                var itemStateName;
+
+                switch(parseInt(result[2])) {
+                    case 0:
+                        itemStateName = "Beans Harvested";
+                        break;
+                    case 1:
+                        itemStateName = "Beans Processed";
+                        break;
+                    case 2:
+                        itemStateName = "Beans Packed";
+                        break;
+                    case 3:
+                        itemStateName = "Beans For Sale";
+                        break;
+                    case 4:
+                        itemStateName = "Beans Sold";
+                        break;
+                    case 5:
+                        itemStateName = "Beans Ground";
+                        break;
+                    case 6:
+                        itemStateName = "Chocolate Made";
+                        break;
+                    case 7:
+                        itemStateName = "Chocolate Shipped";
+                        break;
+                    case 8:
+                        itemStateName = "Chocolate Received";
+                        break;
+                    case 9:
+                        itemStateName = "Chocolate Branded";
+                        break;
+                    case 10:
+                        itemStateName = "Chocolate For Sale";
+                        break;
+                    case 11:
+                        itemStateName = "Chocolate Sold";
+                        break;
+                }
+
+                itemStateText.innerText = itemStateName;
                 factoryIDText.innerText = result[3];
                 distributorIDText.innerText = result[4];
                 chocolateBrandText.innerText = result[5];
@@ -450,7 +494,7 @@ App = {
             }).catch(function(err) {
               console.log(err.message);
             });
-        },
+    },
 
     displayProductInfo: function (event) {
         event.preventDefault();

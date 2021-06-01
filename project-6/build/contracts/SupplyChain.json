@@ -28322,10 +28322,280 @@
   },
   "networks": {
     "4": {
-      "events": {},
+      "events": {
+        "0xe533e271e378877c0138e2f07282f1d84cf905c00da6c396d1300ff4b823899d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "upc",
+              "type": "uint256"
+            }
+          ],
+          "name": "BeansHarvested",
+          "type": "event"
+        },
+        "0x4b8eff8782631f8c03d01eca3d451f40f250d19ad3f1b789e76892b2cc210950": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "upc",
+              "type": "uint256"
+            }
+          ],
+          "name": "BeansProcessed",
+          "type": "event"
+        },
+        "0x65ac603a633a9faad9e556f04e1de43b6bed779595b27e03438aeb6f827bb88b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "upc",
+              "type": "uint256"
+            }
+          ],
+          "name": "BeansPacked",
+          "type": "event"
+        },
+        "0xa32310e5504e5df1cec141bcd85b409b74553f9b33665d857552c6051ef967dd": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "upc",
+              "type": "uint256"
+            }
+          ],
+          "name": "BeansForSale",
+          "type": "event"
+        },
+        "0xe53260d846850858c09375b7a9db20f12178dbe29dc5902eb18dd0f96dfb75ed": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "upc",
+              "type": "uint256"
+            }
+          ],
+          "name": "BeansSold",
+          "type": "event"
+        },
+        "0xda8fa0dfe9042220a2513a5e2a4a8ec255175e2d2683ccedb53a07dc5cb0a4d4": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "upc",
+              "type": "uint256"
+            }
+          ],
+          "name": "BeansShipped",
+          "type": "event"
+        },
+        "0xfc915768f0547b27b70dae743ed905692e0afd0fabecbcb57dc591d96c65be78": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "upc",
+              "type": "uint256"
+            }
+          ],
+          "name": "BeansGround",
+          "type": "event"
+        },
+        "0x958137a1c8ad07703086ad5d3e71d5821f3110377d36d99d3e2aea02007ec61b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "upc",
+              "type": "uint256"
+            }
+          ],
+          "name": "ChocolateMade",
+          "type": "event"
+        },
+        "0x0a0129e18ef9f7d9701bf193905b86da87be8b0a5c59ae11a598d30f134429c3": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "upc",
+              "type": "uint256"
+            }
+          ],
+          "name": "ChocolateShipped",
+          "type": "event"
+        },
+        "0xeba13c7bce1c2327523660cf35e490f2e635925605f0e3b3a085916e971c2e31": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "upc",
+              "type": "uint256"
+            }
+          ],
+          "name": "ChocolateReceived",
+          "type": "event"
+        },
+        "0x32ab3662126e21447b929d7534061abb800b9a1df5eba53714eab638ff968fbf": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "upc",
+              "type": "uint256"
+            }
+          ],
+          "name": "ChocolateBranded",
+          "type": "event"
+        },
+        "0xee6948c90faa51001d5eb44839433b7fd03a7cb7c76f6005e6cb8a59c2a794e9": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "upc",
+              "type": "uint256"
+            }
+          ],
+          "name": "ChocolateForSale",
+          "type": "event"
+        },
+        "0x698279d63e8cf3306845576d87e07c497f6b5e3fd25a6f6a9b630bab3de6aebc": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "upc",
+              "type": "uint256"
+            }
+          ],
+          "name": "ChocolateSold",
+          "type": "event"
+        },
+        "0x28b26e7a3d20aedbc5f8f2ebf7da671c0491723a2b78f47a097b0e46dee07142": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "ConsumerAdded",
+          "type": "event"
+        },
+        "0xe3f5ed5f263f1f01764a96edfc7d025f511ec5f7d180e8816908b78bcf74f098": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "ConsumerRemoved",
+          "type": "event"
+        },
+        "0xddbf200aa634dc3fb81cfd68583dd1040d1c751d335e1d86b631bde3e977fea8": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "DistributorAdded",
+          "type": "event"
+        },
+        "0x126174f6cf49c81cdb4a9214c6b8f037bef55b4ec31e4fc776cea2a1c8a88d59": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "DistributorRemoved",
+          "type": "event"
+        },
+        "0x6fdc0147105e43e21da80a75b42d0fd464060d5e1a34b0cefbf0b4ccfc2e36a1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "FactoryAdded",
+          "type": "event"
+        },
+        "0xafa2737b2090fa39c66b7348625f0c03726240f724defbc6216d679506f94441": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "FactoryRemoved",
+          "type": "event"
+        },
+        "0x2e0ded4123377a3c2bc9a26f1717655a129e2f20752924d42e730ec89c83dbd0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "FarmerAdded",
+          "type": "event"
+        },
+        "0xa5e0f060af304ab17dd418c7927e3da3ae7868189bf387aee09ab179ccc572f2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "name": "FarmerRemoved",
+          "type": "event"
+        },
+        "0x5c486528ec3e3f0ea91181cff8116f02bfa350e03b8b6f12e00765adbb5af85c": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "name": "oldOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "TransferOwnership",
+          "type": "event"
+        }
+      },
       "links": {},
-      "address": "0x6915c7F096AF88cf84D174BB64e4644003EB9252",
-      "transactionHash": "0x5b84a3c906ba6492ba7869c923e46a34ca815a3af2399a46325819c1bfec0e86"
+      "address": "0xA7461ee73b9776716e03Fe44BB3a3d7C9597C7DE",
+      "transactionHash": "0x0192ca66330dcb229a1041583c5356691d8a8ce72110ff99e77c3df741281377"
     },
     "5777": {
       "events": {},
@@ -28880,10 +29150,16 @@
       "links": {},
       "address": "0x7346F95b1AC67f4219f7c559a6f16Dda3406696A",
       "transactionHash": "0x230dcfce763ce29b4786229555ea830acf024c6cc580efca7b03bce64013646a"
+    },
+    "1622479378725": {
+      "events": {},
+      "links": {},
+      "address": "0xdC3832DF5f1F1C1e565f2b758B2F6F1c5108D899",
+      "transactionHash": "0xde3d024177e8e0071e3dd0a578c20508d2ea7fb2dfbe0f921cce61b21d3aecfb"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-05-18T09:02:52.430Z",
+  "updatedAt": "2021-06-01T07:24:27.953Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
