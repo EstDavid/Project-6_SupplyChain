@@ -107,7 +107,7 @@ App = {
         
         /// JSONfy the smart contracts
         $.getJSON(jsonSupplyChain, function(data) {
-            console.log('data',data);
+            // console.log('data',data);
             var SupplyChainArtifact = data;
             App.contracts.SupplyChain = TruffleContract(SupplyChainArtifact);
             App.contracts.SupplyChain.setProvider(App.web3Provider);
@@ -128,7 +128,7 @@ App = {
         App.getMetaskAccountID();
 
         var processId = parseInt($(event.target).data('id'));
-        console.log('processId',processId);
+        // console.log('processId',processId);
 
         switch(processId) {
             case 1:
@@ -233,7 +233,7 @@ App = {
             return instance.packBeans(App.upc, {from: App.metamaskAccountID});
         }).then(function(result) {
             $("#ftc-item").text(result);
-            console.log('packBeans',result);
+            // console.log('packBeans',result);
         }).catch(function(err) {
             console.log(err.message);
         });
@@ -246,11 +246,11 @@ App = {
 
         App.contracts.SupplyChain.deployed().then(function(instance) {
             const beansPriceWei = web3.toWei(App.beansPrice.toString(), "ether");
-            console.log('productPrice',beansPriceWei);
+            // console.log('productPrice',beansPriceWei);
             return instance.sellBeans(App.upc, beansPriceWei, {from: App.metamaskAccountID});
         }).then(function(result) {
             $("#ftc-item").text(result);
-            console.log('sellBeans',result);
+            // console.log('sellBeans',result);
         }).catch(function(err) {
             console.log(err.message);
         });
@@ -266,7 +266,7 @@ App = {
             return instance.buyBeans(App.upc, {from: App.metamaskAccountID, value: walletValue});
         }).then(function(result) {
             $("#ftc-item").text(result);
-            console.log('buyBeans',result);
+            // console.log('buyBeans',result);
         }).catch(function(err) {
             console.log(err.message);
         });
@@ -281,7 +281,7 @@ App = {
             return instance.grindBeans(App.upc, {from: App.metamaskAccountID});
         }).then(function(result) {
             $("#ftc-item").text(result);
-            console.log('grindBeans',result);
+            // console.log('grindBeans',result);
         }).catch(function(err) {
             console.log(err.message);
         });
@@ -296,7 +296,7 @@ App = {
             return instance.makeChocolate(App.upc, {from: App.metamaskAccountID});
         }).then(function(result) {
             $("#ftc-item").text(result);
-            console.log('makeChocolate',result);
+            // console.log('makeChocolate',result);
         }).catch(function(err) {
             console.log(err.message);
         });
@@ -311,7 +311,7 @@ App = {
             return instance.shipChocolate(App.upc, App.distributorID, {from: App.metamaskAccountID});
         }).then(function(result) {
             $("#ftc-item").text(result);
-            console.log('shipChocolate',result);
+            // console.log('shipChocolate',result);
         }).catch(function(err) {
             console.log(err.message);
         });
@@ -326,7 +326,7 @@ App = {
             return instance.receiveChocolate(App.upc, {from: App.metamaskAccountID});
         }).then(function(result) {
             $("#ftc-item").text(result);
-            console.log('receiveChocolate',result);
+            // console.log('receiveChocolate',result);
         }).catch(function(err) {
             console.log(err.message);
         });
@@ -341,7 +341,7 @@ App = {
             return instance.brandChocolate(App.upc, App.chocolateBrand, {from: App.metamaskAccountID});
         }).then(function(result) {
             $("#ftc-item").text(result);
-            console.log('brandChocolate',result);
+            // console.log('brandChocolate',result);
         }).catch(function(err) {
             console.log(err.message);
         });
@@ -357,7 +357,7 @@ App = {
             return instance.sellChocolate(App.upc, chocolatePriceWei, {from: App.metamaskAccountID});
         }).then(function(result) {
             $("#ftc-item").text(result);
-            console.log('sellChocolate',result);
+            // console.log('sellChocolate',result);
         }).catch(function(err) {
             console.log(err.message);
         });
@@ -373,7 +373,7 @@ App = {
             return instance.purchaseItem(App.upc, {from: App.metamaskAccountID, value: walletValue});
         }).then(function(result) {
             $("#ftc-item").text(result);
-            console.log('purchaseItem',result);
+            // console.log('purchaseItem',result);
         }).catch(function(err) {
             console.log(err.message);
         });
@@ -383,7 +383,7 @@ App = {
     ///   event.preventDefault();
     ///    var processId = parseInt($(event.target).data('id'));
         App.upc = $('#upc').val();
-        console.log('upc',App.upc);
+        // console.log('upc',App.upc);
         const skuText = document.getElementById("skuOutput");
         const upcText = document.getElementById("upcOutput");
         const ownerIDText = document.getElementById("ownerIDOutput");
@@ -401,7 +401,7 @@ App = {
             originFarmNameText.innerText = result[4];
             originFarmInformationText.innerText = result[5];
             $("#ftc-item").text(result);
-            console.log('fetchItemBufferOne', result);
+            // console.log('fetchItemBufferOne', result);
         }).catch(function(err) {
           console.log(err.message);
         });
@@ -425,7 +425,7 @@ App = {
             productNotesText.innerText = result[5];
             productPriceText.innerText = web3.fromWei(result[6].toString(), 'ether');
             $("#ftc-item").text(result);
-            console.log('fetchItemBufferTwo', result);
+            // console.log('fetchItemBufferTwo', result);
         }).catch(function(err) {
           console.log(err.message);
         });
@@ -490,7 +490,7 @@ App = {
                 chocolateBrandText.innerText = result[5];
                 consumerIDText.innerText = result[6];
                 $("#ftc-item").text(result);
-                console.log('fetchItemBufferThree', result);
+                // console.log('fetchItemBufferThree', result);
             }).catch(function(err) {
               console.log(err.message);
             });
@@ -509,13 +509,13 @@ App = {
         event.preventDefault();
         App.readForm();
 
-        console.log(App.originFarmerID);
+        // console.log(App.originFarmerID);
 
         App.contracts.SupplyChain.deployed().then(function(instance) {
             return instance.addFarmer(App.originFarmerID, {from: App.metamaskAccountID});
           }).then(function(result) {
               $("#ftc-item").text(result);
-              console.log('addFarmer', result);
+            //   console.log('addFarmer', result);
           }).catch(function(err) {
             console.log(err.message);
           });        
@@ -529,7 +529,7 @@ App = {
             return instance.addFactory(App.factoryID, {from: App.metamaskAccountID});
           }).then(function(result) {
               $("#ftc-item").text(result);
-              console.log('addFactory', result);
+            //   console.log('addFactory', result);
           }).catch(function(err) {
             console.log(err.message);
           });        
@@ -543,7 +543,7 @@ App = {
             return instance.addDistributor(App.distributorID, {from: App.metamaskAccountID});
           }).then(function(result) {
               $("#ftc-item").text(result);
-              console.log('addDistributor', result);
+            //   console.log('addDistributor', result);
           }).catch(function(err) {
             console.log(err.message);
           });        
@@ -557,7 +557,7 @@ App = {
             return instance.addConsumer(App.consumerID, {from: App.metamaskAccountID});
           }).then(function(result) {
               $("#ftc-item").text(result);
-              console.log('addConsumer', result);
+            //   console.log('addConsumer', result);
           }).catch(function(err) {
             console.log(err.message);
           });        
