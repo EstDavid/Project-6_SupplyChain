@@ -40,23 +40,23 @@ App = {
         App.consumerID = $("#consumerID").val();
         App.chocolatePrice = $("#chocolatePrice").val();
 
-        console.log(
-            App.sku,
-            App.upc,
-            App.ownerID, 
-            App.originFarmerID, 
-            App.originFarmName, 
-            App.originFarmInformation, 
-            App.originFarmLatitude, 
-            App.originFarmLongitude, 
-            App.productNotes, 
-            App.beansPrice, 
-            App.factoryID, 
-            App.distributorID, 
-            App.consumerID,
-            App.chocolateBrand,
-            App.chocolatePrice
-        );
+        // console.log(
+        //     App.sku,
+        //     App.upc,
+        //     App.ownerID, 
+        //     App.originFarmerID, 
+        //     App.originFarmName, 
+        //     App.originFarmInformation, 
+        //     App.originFarmLatitude, 
+        //     App.originFarmLongitude, 
+        //     App.productNotes, 
+        //     App.beansPrice, 
+        //     App.factoryID, 
+        //     App.distributorID, 
+        //     App.consumerID,
+        //     App.chocolateBrand,
+        //     App.chocolatePrice
+        // );
     },
 
     initWeb3: async function () {
@@ -95,7 +95,7 @@ App = {
                 console.log('Error:',err);
                 return;
             }
-            console.log('getMetaskID:',res);
+            // console.log('getMetaskID:',res);
             App.metamaskAccountID = res[0];
 
         })
@@ -103,7 +103,7 @@ App = {
 
     initSupplyChain: function () {
         /// Source the truffle compiled smart contracts
-        var jsonSupplyChain='build/contracts/SupplyChain.json';
+        var jsonSupplyChain='./build/contracts/SupplyChain.json';
         
         /// JSONfy the smart contracts
         $.getJSON(jsonSupplyChain, function(data) {
